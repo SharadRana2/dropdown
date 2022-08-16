@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar ul {
+  list-style: none;
+}
+#navbar ul li {
+  display: inline-block;
+  padding: 1rem;
+  color: #333;
+  position: relative;
+}
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+/*Hide nested ul*/
+#navbar ul li ul {
+  display: none;
+}
+#navbar ul li:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #81cacf;
+}
+#navbar ul li:hover a {
+  color: #fff;
+  background: #81cacf;
+}
+/*Nested ul show*/
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+#navbar ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+}
+#navbar ul li:hover ul li a {
+  color: #333;
+  background: #e7e7e7;
+}
+#navbar ul li:hover ul li:hover {
+  background-color: #e0e0e0;
+}
+#navbar ul li:hover ul li:hover a {
+  background-color: #e0e0e0;
+}
+span {
+  background-color: #81cacf;
+  position: absolute;
+  right: 5px;
+  border-radius: 5px;
+}
+#navbar ul li:hover ul li:hover a span {
+  color: #333;
+}
+#showcase {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #81cacf;
+  height: 400px;
+}
+#showcase h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+@media (max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+  #navbar ul li:hover ul {
+    display: block;
+    position: relative;
+  }
+}
